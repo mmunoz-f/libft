@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 18:17:25 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/13 19:52:43 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -111,6 +112,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 
 int				ft_get_next_line(int fd, char **line);
 
-int				ft_strcmp(const char *s1, const char *s2)
+int				ft_strcmp(const char *s1, const char *s2);
+
+float			ft_atof(char *nptr);
 
 #endif
