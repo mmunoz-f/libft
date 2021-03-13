@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 13:58:45 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/13 18:17:25 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
 int				ft_get_next_line(int fd, char **line);
+
+int				ft_strcmp(const char *s1, const char *s2)
 
 #endif
