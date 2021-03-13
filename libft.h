@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 19:52:43 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/13 20:55:52 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,6 @@ int				ft_get_next_line(int fd, char **line);
 
 int				ft_strcmp(const char *s1, const char *s2);
 
-float			ft_atof(char *nptr);
+double			ft_atod(char *nptr);
 
 #endif
