@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 14:41:24 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 13:55:39 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/13 18:07:15 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c)
 		{
 			j = ft_add_word(&f, &s[i], c);
-			fflush(stdout);
 			if (!j)
 				return (0);
 			i += j;
