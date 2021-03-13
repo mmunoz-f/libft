@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 14:41:24 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/10 21:45:39 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/13 13:55:39 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,14 @@ static int	ft_add_word(char ***f, char const *s, char c)
 		(*f)[i] = tmp[i];
 		i++;
 	}
-	// printf("|%zu|", len);
 	len = word_len(s, c);
-	// printf("%zu%s\n", i, s);
 	(*f)[i] = ft_substr(s, 0, len);
-	// printf("'%s'", *f[0]);
 	(*f)[i + 1] = 0;
-	// exit(-1);
 	free(tmp);
 	return (len);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**f;
 	size_t	i;
