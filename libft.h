@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/14 11:05:54 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/03/14 11:56:26 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 typedef struct s_list
 {
+	struct s_list	*previous;
 	void			*content;
 	struct s_list	*next;
 }	t_list;
