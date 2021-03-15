@@ -6,7 +6,7 @@
 #    By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 14:51:49 by mmunoz-f          #+#    #+#              #
-#    Updated: 2021/03/13 21:04:38 by mmunoz-f         ###   ########.fr        #
+#    Updated: 2021/03/15 11:33:54 by mmunoz-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ OBJS_BONUS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS_SOURCE)
-	ar -cr $(NAME) $(OBJS_SOURCE)
+$(NAME): $(OBJS_SOURCE) $(OBJS_BONUS)
+	ar -cr $(NAME) $(OBJS_SOURCE) $(OBJS_BONUS)
 
 clean:
 	rm -f $(OBJS_SOURCE) $(OBJS_BONUS)
