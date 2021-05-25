@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/31 19:22:38 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2021/05/25 21:18:20 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void			ft_putnbr_fd(int n, int fd);
 
 void			ft_putstr_fd(char *s, int fd);
 
-char			**ft_split(char const *s, char c);
+char			**ft_split(char const *s, const char *set);
 
 char			*ft_strchr(const char *s, int c);
 
