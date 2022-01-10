@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 14:41:24 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2022/01/10 14:09:32 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:10:41 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,18 @@ char	**ft_split(char const *src, const char *set)
 	size_t	i;
 	size_t	j;
 
-	if (!s || !set)
+	if (!src || !set)
 		return (0);
 	i = 0;
 	f = (char **)malloc(sizeof(char *));
 	if (!f)
 		return (0);
 	*f = 0;
-	while (s[i])
+	while (src[i])
 	{
-		if (!(ft_strchr(set, s[i])))
+		if (!(ft_strchr(set, src[i])))
 		{
-			j = ft_add_word(&f, &s[i], set);
+			j = ft_add_word(&f, &src[i], set);
 			if (!j)
 				return (0);
 			i += j;
