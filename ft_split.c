@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 14:41:24 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/04/01 14:39:59 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:09:32 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int	ft_add_word(char ***f, char const *s, const char *set)
 	return (len);
 }
 
-char	**ft_split(char const *s, const char *set)
+char	**ft_split(char const *src, const char *set)
 {
 	char	**f;
 	size_t	i;
