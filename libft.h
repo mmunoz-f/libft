@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2022/01/10 14:09:11 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:16:07 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
-/* cuts src string each time a character in set is found, all resultant strings are returned in an array */
+/* cuts src string each time a character in set is found, all 
+	resultant strings are returned in an array */
 char	**ft_split(char const *src, const char *set);
 
 char	*ft_strchr(const char *s, int c);
@@ -124,15 +125,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
-
+			void (*del)(void *));
 
 /**
  * More
 **/
 
-/* When called a line of fd is returned, returns 1 if success, 0 when there is nothing more to return and -1 if an error ocurred */
+/* When called a line of fd is returned, returns 1 if success, 
+	0 when there is nothing more to return and -1 if an error ocurred */
 int		ft_get_next_line(int fd, char **line);
-
 
 #endif
