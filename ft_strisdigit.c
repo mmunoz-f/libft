@@ -6,18 +6,18 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:47:14 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/04/05 11:55:22 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:19:20 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strisdigit(const char *s)
+int	ft_strisdigit(const char *src)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (src[i])
 	{
-		if (s[i] < 48 || s[i] > 57)
+		if (src[i] < 48 || src[i] > 57)
 			return (0);
 		i++;
 	}

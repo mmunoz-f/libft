@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 19:17:32 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/29 16:53:44 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:24:35 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char		*a;
-	const char		*b;
-	unsigned int	i;
+	const char	*a;
+	const char	*b;
+	size_t		i;
 
 	a = s1;
 	b = s2;

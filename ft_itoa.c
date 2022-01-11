@@ -6,15 +6,15 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 16:48:12 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/10 13:44:46 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/11 14:21:16 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_nlength(int n)
+static size_t	ft_nlength(int n)
 {
-	int	i;
+	size_t	i;
 
 	i = 1;
 	while (n / 10)
@@ -30,25 +30,25 @@ static unsigned int	ft_nlength(int n)
 char	*ft_itoa(int n)
 {
 	unsigned int	nbr;
-	unsigned int	size;
-	char			*a;
+	size_t			size;
+	char			*str;
 
 	size = ft_nlength(n);
-	a = (char *)malloc(size + 1);
-	if (!a)
+	str = (char *)malloc(size + 1);
+	if (!str)
 		return (0);
 	if (n < 0)
 	{
-		a[0] = '-';
+		str[0] = '-';
 		nbr = -(unsigned int)n;
 	}
 	else
 		nbr = (unsigned int)n;
-	a[size] = 0;
+	str[size] = 0;
 	while (nbr || !(n--))
 	{
-		a[--size] = nbr % 10 + 48;
+		str[--size] = nbr % 10 + 48;
 		nbr /= 10;
 	}
-	return (a);
+	return (str);
 }

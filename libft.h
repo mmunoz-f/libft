@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2022/01/10 14:16:07 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:22:25 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_atoi(const char *nptr);
 
 double	ft_atod(char *np);
 
-void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *src, size_t n);
 
 void	*ft_calloc(size_t count, size_t size);
 
@@ -50,7 +50,7 @@ char	*ft_itoa(int n);
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 
-void	*ft_memchr(void *s, int c, size_t n);
+void	*ft_memchr(void *src, int c, size_t n);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
@@ -62,19 +62,18 @@ void	*ft_memset(void *b, int c, size_t len);
 
 void	ft_putchar_fd(char c, int fd);
 
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *src, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
 
-void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *src, int fd);
 
-/* cuts src string each time a character in set is found, all 
-	resultant strings are returned in an array */
+/* cuts src string each time a character in set is found, all resultant strings are returned in an array */
 char	**ft_split(char const *src, const char *set);
 
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *src, int c);
 
-char	*ft_strdup(const char *s);
+char	*ft_strdup(const char *src);
 
 char	*ft_strjoin(char const *s1, const char *s2);
 
@@ -82,9 +81,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
-size_t	ft_strlen(const char *s);
+size_t	ft_strlen(const char *src);
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(const char *src, char (*f)(unsigned int, char));
 
 int		ft_strcmp(const char *s1, const char *s2);
 
@@ -92,11 +91,11 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strnstr(char *big, const char *little, size_t len);
 
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *src, int c);
 
-char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *src, char const *set);
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *src, size_t start, size_t len);
 
 int		ft_tolower(int c);
 
@@ -131,8 +130,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
  * More
 **/
 
-/* When called a line of fd is returned, returns 1 if success, 
-	0 when there is nothing more to return and -1 if an error ocurred */
+/* When called a line of fd is returned, returns 1 if success, 0 when there is nothing more to return and -1 if an error ocurred */
 int		ft_get_next_line(int fd, char **line);
 
 #endif

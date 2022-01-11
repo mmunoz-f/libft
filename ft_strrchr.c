@@ -6,26 +6,26 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 19:52:22 by marvin            #+#    #+#             */
-/*   Updated: 2021/03/10 12:39:16 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:14:11 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *src, int c)
 {
-	unsigned int	i;
-	char			*f;
-	unsigned int	len;
+	size_t	i;
+	char	*ptr;
+	size_t	len;
 
 	i = 0;
-	f = 0;
-	len = ft_strlen(s) + 1;
+	ptr = 0;
+	len = ft_strlen(src) + 1;
 	while (i < len)
 	{
-		if (s[i] == c)
-			f = (char *)&s[i];
+		if (src[i] == c)
+			ptr = (char *)&src[i];
 		i++;
 	}
-	return (f);
+	return (ptr);
 }

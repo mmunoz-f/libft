@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 10:02:48 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/29 12:45:32 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:25:16 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned int	i;
-	char			*a;
-	char			*b;
+	size_t	i;
+	char	*a;
+	char	*b;
 
 	a = (char *)dest;
 	b = (char *)src;

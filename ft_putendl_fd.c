@@ -6,17 +6,17 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 10:45:50 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/01/29 17:28:45 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:23:16 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *src, int fd)
 {
-	if (s)
+	if (src)
 	{
-		ft_putstr_fd(s, fd);
+		ft_putstr_fd(src, fd);
 		ft_putchar_fd('\n', fd);
 	}
 }

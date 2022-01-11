@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 18:57:07 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 20:41:25 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/11 14:29:06 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 double	ft_atod(char *np)
 {
 	double	d;
-	size_t	i;
 	double	div;
-	int		n;
+	size_t	i;
+	int		negative;
 
 	i = 0;
-	n = 0;
+	negative = 0;
 	while (np[i] && (np[i] == ' ' || (np[i] < 14 && np[i] > 8) || np[i] == '+'))
 		i++;
 	if (np[i] == '-')
-		n = ++i;
+		negative = ++i;
 	while (np[i] < 58 && np[i] > 47)
 		d = d * 10 + (np[i++] - 48);
 	if (np[i++] == '.')
@@ -36,7 +36,7 @@ double	ft_atod(char *np)
 			div *= 10;
 		}
 	}
-	if (n != 0)
+	if (negative != 0)
 		return (-d);
 	return (d);
 }

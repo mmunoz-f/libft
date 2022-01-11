@@ -6,22 +6,22 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 10:42:26 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/10 12:51:10 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:22:51 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *src, int fd)
 {
-	unsigned int	i;
+	size_t	i;
 
-	if (!s)
+	if (!src)
 		return ;
 	i = 0;
-	while (s[i])
+	while (src[i])
 	{
-		write(fd, &s[i], 1);
+		write(fd, &src[i], 1);
 		i++;
 	}
 }

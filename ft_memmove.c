@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 10:45:42 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/29 14:22:16 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:24:06 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*a;
-	const char		*b;
+	size_t		i;
+	char		*a;
+	const char	*b;
 
 	a = dest;
 	b = src;

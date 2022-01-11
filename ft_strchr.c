@@ -6,18 +6,20 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 19:47:45 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/24 19:03:24 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/01/10 18:22:07 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *src, int c)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] && s[i] != c)
+	while (src[i] && src[i] != c)
 		i++;
-	if (s[i] == c)
-		return ((char *)&s[i]);
+	if (src[i] == c)
+		return ((char *)&src[i]);
 	return (0);
 }
