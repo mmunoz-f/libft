@@ -14,4 +14,6 @@ As soon as you compile the work with `make`, a ".a" file will be generate, add t
 gcc main.c -L. -lft
 ```
 
+After the -L flag you are supposed to add the path to the static library file (the .a file), in the example above the static library, is located on the root.
+
 Remember to include the .h file in your code.
