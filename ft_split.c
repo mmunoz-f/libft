@@ -6,73 +6,102 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 14:41:24 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/03/13 18:07:15 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/12/07 18:13:18 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t	word_len(char const *s, char c)
+static size_t	word_len(char const *src, const char *set)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] && s[i] != c)
+	while (src[i] && !ft_strchr(set, src[i]))
 		i++;
 	return (i);
 }
 
-static int	ft_add_word(char ***f, char const *s, char c)
+static void	destroy(char **arr)
 {
-	size_t	len;
-	char	**tmp;
 	size_t	i;
 
+	i = 0;
+	while (arr[i])
+		free(arr[i]);
+	free(arr);
+}
+
+static int	resize(char ***arr)
+{
+	size_t	len;
+	size_t	i;
+	char	**tmp;
+
 	len = 0;
-	while ((*f)[len])
+	while ((*arr)[len])
 		len++;
-	tmp = *f;
-	*f = (char **)malloc(sizeof(char *) * (len + 2));
-	if (!(*f))
-		return (0);
+	tmp = *arr;
+	*arr = malloc(sizeof(char *) * (len + 2));
+	if (!arr)
+	{
+		destroy(tmp);
+		return (1);
+	}
 	i = 0;
 	while (i < len)
 	{
-		(*f)[i] = tmp[i];
+		(*arr)[i] = tmp[i];
 		i++;
 	}
-	len = word_len(s, c);
-	(*f)[i] = ft_substr(s, 0, len);
-	(*f)[i + 1] = 0;
+	(*arr)[i] = 0;
 	free(tmp);
-	return (len);
+	return (0);
 }
 
-char	**ft_split(char const *s, char c)
+static int	add_word(char ***arr, char const *src, size_t *i, const char *set)
 {
-	char	**f;
-	size_t	i;
 	size_t	j;
+	size_t	wlen;
 
-	if (!s)
-		return (0);
-	i = 0;
-	f = (char **)malloc(sizeof(char *));
-	if (!f)
-		return (0);
-	*f = 0;
-	while (s[i])
+	if (resize(arr))
+		return (1);
+	j = 0;
+	while ((*arr)[j])
+		j++;
+	wlen = word_len(&(src[*i]), set);
+	(*arr)[j] = ft_substr(src, *i, wlen);
+	if (!(*arr)[j])
 	{
-		if (s[i] != c)
+		destroy(*arr);
+		return (1);
+	}
+	*i += wlen;
+	(*arr)[j + 1] = 0;
+	return (0);
+}
+
+char	**ft_split(char const *src, const char *set)
+{
+	char	**arr;
+	size_t	i;
+
+	if (!src || !set)
+		return (0);
+	arr = malloc(sizeof(char *));
+	if (!arr)
+		return (0);
+	*arr = 0;
+	i = 0;
+	while (src[i])
+	{
+		if (!(ft_strchr(set, src[i])))
 		{
-			j = ft_add_word(&f, &s[i], c);
-			if (!j)
+			if (add_word(&arr, src, &i, set))
 				return (0);
-			i += j;
 		}
 		else
 			i++;
 	}
-	return (f);
+	return (arr);
 }
