@@ -6,7 +6,7 @@
 #    By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 14:51:49 by mmunoz-f          #+#    #+#              #
-#    Updated: 2022/12/07 18:16:34 by mmunoz-f         ###   ########.fr        #
+#    Updated: 2022/12/07 19:37:21 by mmunoz-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,6 @@ SOURCE = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_lstmap.c
 OBJS_SOURCE = $(SOURCE:.c=.o)
 LIBS = libft.h
-OBJS_BONUS = $(BONUS:.c=.o)
 
 .PHONY: all
 all: $(NAME)
