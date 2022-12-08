@@ -6,13 +6,13 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 10:45:50 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2021/01/29 17:28:45 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/12/08 21:23:34 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(const char *s, int fd)
 {
 	if (s)
 	{

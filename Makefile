@@ -6,11 +6,11 @@
 #    By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 14:51:49 by mmunoz-f          #+#    #+#              #
-#    Updated: 2022/12/08 14:21:00 by mmunoz-f         ###   ########.fr        #
+#    Updated: 2022/12/08 22:01:11 by mmunoz-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SOURCE = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \

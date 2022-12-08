@@ -6,7 +6,7 @@
 /*   By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 11:57:22 by mmunoz-f          #+#    #+#             */
-/*   Updated: 2022/12/08 14:19:29 by mmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/12/08 21:23:24 by mmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ void			*ft_memset(void *b, int c, size_t len);
 
 void			ft_putchar_fd(char c, int fd);
 
-void			ft_putendl_fd(char *s, int fd);
+void			ft_putendl_fd(const char *s, int fd);
 
 void			ft_putnbr_fd(int n, int fd);
 
-void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr_fd(const char *s, int fd);
 
 char			**ft_split(char const *src, const char *set);
 
