@@ -6,7 +6,7 @@
 #    By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 14:51:49 by mmunoz-f          #+#    #+#              #
-#    Updated: 2022/01/11 16:37:53 by mmunoz-f         ###   ########.fr        #
+#    Updated: 2022/12/11 14:20:33 by mmunoz-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-update: fclean
-	git add .
-	git commit -am "$(M)"
-	git push origin master
