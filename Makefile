@@ -6,13 +6,12 @@
 #    By: mmunoz-f <mmunoz-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 14:51:49 by mmunoz-f          #+#    #+#              #
-#    Updated: 2022/12/11 14:20:33 by mmunoz-f         ###   ########.fr        #
+#    Updated: 2022/12/11 15:02:49 by mmunoz-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-M =
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
 NAME = libft.a
 SOURCE = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
